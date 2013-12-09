@@ -40,7 +40,7 @@
             }
         };
 
-        var startFall = function(elem, stagger) {
+        var startFall = function(elem, height, stagger) {
             var dx = settings.dx || Math.floor((Math.random()*10)) + 5;
             var copy = elem.clone();
             copy.addClass('solitaire-victory-clone');
@@ -52,7 +52,7 @@
             var originalOffset = elem.offset();
             copy.offset({top: originalOffset.top, left: originalOffset.left});
             body.append(copy);
-            setTimeout(function() {fallIteration(copy, copy.height(), copy.offset(), dx, 0);}, stagger);
+            setTimeout(function() {fallIteration(copy, height, copy.offset(), dx, 0);}, stagger);
         };
 
         if (clear) $('.solitaire-victory-clone').remove();
@@ -61,7 +61,7 @@
             var obj = $(this);
             if (relativeToDocument || obj.offset().top < $(window).height()) {
                 if (!obj.hasClass('solitaire-victory-clone')) {
-                    startFall(obj, index*stagger);
+                    startFall(obj, obj.height(), index*stagger);
                 }
             }
         });
