@@ -4,7 +4,7 @@ solitaireVictory
 A Jquery plugin that emulates the victory animation from Windows Solitaire, using your choice of DOM element(s).
 
 ##Demo Site
-[Right here.](peterkhayes.github.io/solitaireVictory)
+[Right here.](http://peterkhayes.github.io/solitaireVictory)
 
 ##Usage
 **Basic:**
