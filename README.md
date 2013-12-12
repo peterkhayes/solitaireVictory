@@ -3,6 +3,8 @@ solitaireVictory
 
 A Jquery plugin that emulates the victory animation from Windows Solitaire, using your choice of DOM element(s).
 
+Include the js file in any website that uses jQuery.
+
 ##Demo Site
 [Right here.](http://peterkhayes.github.io/solitaireVictory)
 
@@ -23,7 +25,7 @@ $('YOUR-CSS-SELECTOR').solitaireVictory({
   
   bounce: 0.7                   // Amount of speed conserved on bounce.
   
-  endVelocity: 20               // Speed below which the element should not bounce.
+  endVelocity: 20               // If the element is slower than this, it will not bounce.
   
   
   // PAGE CONFIGURATION
