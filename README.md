@@ -26,6 +26,9 @@ $('YOUR-CSS-SELECTOR').solitaireVictory({
   bounce: 0.7                   // Amount of speed conserved on bounce.
   
   endVelocity: 20               // If the element is slower than this, it will not bounce.
+
+  fallToLeft: false             // If set to true, the object will fall to the left instead
+                                // of to the right
   
   
   // PAGE CONFIGURATION

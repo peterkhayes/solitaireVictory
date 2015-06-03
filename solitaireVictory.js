@@ -11,6 +11,7 @@
         var stagger = settings.stagger || 200;
         var relativeToDocument = settings.relativeToDocument || false;
         var clear = settings.clear || false;
+        var fallToLeft = settings.fallToLeft || false;
 
         var body = $('body');
         var windowHeight = (relativeToDocument ? $(document).height() : $(window).height());
@@ -42,6 +43,9 @@
 
         var startFall = function(elem, height, stagger) {
             var dx = settings.dx || Math.floor((Math.random()*10)) + 5;
+            if (fallToLeft) {
+                dx = -dx;
+            }
             var copy = elem.clone();
             copy.addClass('solitaire-victory-clone');
             if (relativeToDocument) {
