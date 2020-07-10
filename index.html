@@ -1,10 +1,12 @@
 <!doctype html>
 <html>
+
 <head>
   <title>YOU WIN</title>
-  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
   <script src='solitaireVictory.js'></script>
 </head>
+
 <body>
   <nav>
     <button class='everything'>Click on me to make EVERYTHING fall!</button>
@@ -13,20 +15,27 @@
   <h1 style='margin: 0;'>Click me!</h1>
   <h3 style='font-weight:normal; margin: 0;'>Click on anything!</h3>
   <img src='cow.jpg'></img>
-  <p style='max-width: 800px;'>Art party chambray fanny pack, single-origin coffee gluten-free Austin tofu hashtag Schlitz cardigan distillery VHS dreamcatcher mlkshk skateboard. Intelligentsia narwhal biodiesel slow-carb selfies flannel. Irony ennui hoodie gentrify Tumblr gastropub. Blue Bottle cliche authentic four loko tattooed, Banksy 3 wolf moon vinyl freegan put a bird on it try-hard. Swag cornhole Helvetica before they sold out +1, plaid slow-carb fanny pack Tumblr banh mi put a bird on it. Readymade Bushwick Vice pork belly, shabby chic 8-bit flannel Cosby sweater lomo +1. Pop-up 90's next level disrupt, distillery vegan scenester selvage High Life gluten-free readymade Neutra typewriter authentic asymmetrical.</p>
+  <p style='max-width: 800px;'>Art party chambray fanny pack, single-origin coffee gluten-free Austin tofu hashtag
+    Schlitz cardigan distillery VHS dreamcatcher mlkshk skateboard. Intelligentsia narwhal biodiesel slow-carb selfies
+    flannel. Irony ennui hoodie gentrify Tumblr gastropub. Blue Bottle cliche authentic four loko tattooed, Banksy 3
+    wolf moon vinyl freegan put a bird on it try-hard. Swag cornhole Helvetica before they sold out +1, plaid slow-carb
+    fanny pack Tumblr banh mi put a bird on it. Readymade Bushwick Vice pork belly, shabby chic 8-bit flannel Cosby
+    sweater lomo +1. Pop-up 90's next level disrupt, distillery vegan scenester selvage High Life gluten-free readymade
+    Neutra typewriter authentic asymmetrical.</p>
 
   <script>
-    $(document).on('ready', function() {
-      $('h1, h3, p, img').click(function(e) {
+    $(document).on('ready', function () {
+      $('h1, h3, p, img').click(function (e) {
         $(e.target).solitaireVictory();
       });
-      $(document).on('click', 'button.clear', function() {
-        $('').solitaireVictory({clear: true});
+      $(document).on('click', 'button.clear', function () {
+        $('').solitaireVictory({ clear: true });
       })
-      $(document).on('click', 'button.everything', function() {
+      $(document).on('click', 'button.everything', function () {
         $('h1, h3, p, img, button').solitaireVictory();
       })
     })
   </script>
 </body>
+
 </html>
