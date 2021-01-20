@@ -43,7 +43,12 @@
 
         var startFall = function(elem, height, stagger) {
             var dx = settings.dx || Math.floor((Math.random()*10)) + 5;
-            if (fallToLeft) {
+            if (fallToLeft == 'random') {
+                // Falls left 50% of the time
+                if (Math.random() >= 0.5) {
+                    dx = -dx;
+                }
+            } else if (fallToLeft) {
                 dx = -dx;
             }
             var copy = elem.clone();
